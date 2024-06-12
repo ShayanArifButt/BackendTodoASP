@@ -1,0 +1,40 @@
+### Get all tasks
+GET http://localhost:5109/api/tasks
+Accept: application/json
+
+###
+
+### Get a single task by ID
+GET http://localhost:5109/api/tasks/4
+Accept: application/json
+
+###
+
+### Create a new task
+POST http://localhost:5109/api/tasks
+Content-Type: application/json
+
+{
+  "description": "New Task from REST Client",
+  "isDone": false,
+  "deadline": "2023-12-31T23:59:59Z"
+}
+
+###
+
+### Update an existing task
+PUT http://localhost:5109/api/tasks/5
+Content-Type: application/json
+
+{
+  "id": 5,
+  "description": "Updated Task from REST Client",
+  "isDone": true,
+  "deadline": "2023-12-31T23:59:59Z"
+}
+
+###
+
+### Delete a task by ID
+DELETE http://localhost:5109/api/tasks/1
+Accept: application/json

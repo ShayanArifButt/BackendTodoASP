@@ -28,7 +28,7 @@ namespace BackendTodoASP.Services
             });
         }
 
-        public async Task<TaskDto> GetTaskByIdAsync(int id)
+        public async Task<TaskDto?> GetTaskByIdAsync(int id)
         {
             var task = await _taskRepository.GetTaskByIdAsync(id);
             if (task == null)

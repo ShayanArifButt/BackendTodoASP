@@ -61,13 +61,13 @@ namespace BackendTodoASP.Controllers
             }
 
             // Check if the task exists
-            var existingTask = await _taskService.GetTaskByIdAsync(id);
-            if (existingTask == null)
+            var existingTaskEntity = await _taskService.GetTaskByIdEntityAsync(id);
+            if (existingTaskEntity == null)
             {
                 return NotFound();
             }
 
-            await _taskService.UpdateTaskAsync(existingTask, taskDto);
+            await _taskService.UpdateTaskAsync(existingTaskEntity, taskDto);
             return NoContent();
         }
 

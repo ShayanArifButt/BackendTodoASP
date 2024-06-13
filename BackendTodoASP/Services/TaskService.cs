@@ -45,6 +45,18 @@ namespace BackendTodoASP.Services
             };
         }
 
+        public async Task<TaskItem?> GetTaskByIdEntityAsync(int id)
+        {
+            var task = await _taskRepository.GetTaskByIdAsync(id);
+            if (task == null)
+            {
+                return null;
+            }
+
+            return task;
+        }
+
+
         public async Task<TaskDto> AddTaskAsync(TaskDto taskDto)
         {
             var task = new TaskItem

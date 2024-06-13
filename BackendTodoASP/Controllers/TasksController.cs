@@ -67,8 +67,8 @@ namespace BackendTodoASP.Controllers
                 return NotFound();
             }
 
-            await _taskService.UpdateTaskAsync(existingTaskEntity, taskDto);
-            return NoContent();
+            var updatedTask = await _taskService.UpdateTaskAsync(existingTaskEntity, taskDto);
+            return Ok(updatedTask);
         }
 
         [HttpDelete("{id}")]

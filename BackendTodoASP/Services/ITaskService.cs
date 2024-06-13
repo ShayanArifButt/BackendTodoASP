@@ -11,7 +11,7 @@ namespace BackendTodoASP.Services
         Task<TaskDto?> GetTaskByIdAsync(int id);
         Task<TaskItem?> GetTaskByIdEntityAsync(int id);
         Task<TaskDto> AddTaskAsync(TaskDto taskDto);
-        Task UpdateTaskAsync(TaskItem task, TaskDto taskDto);
+        Task<TaskDto> UpdateTaskAsync(TaskItem task, TaskDto taskDto);
         Task DeleteTaskAsync(int id);
     }
 }

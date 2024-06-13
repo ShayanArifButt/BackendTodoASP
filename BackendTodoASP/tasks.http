@@ -23,13 +23,13 @@ Content-Type: application/json
 ###
 
 ### Update an existing task
-PUT http://localhost:5109/api/tasks/5
+PUT http://localhost:5109/api/tasks/2
 Content-Type: application/json
 
 {
-  "id": 5,
+  "id": 2,
   "description": "Updated Task from REST Client",
-  "isDone": true,
+  "isDone": false,
   "deadline": "2023-12-31T23:59:59Z"
 }
 

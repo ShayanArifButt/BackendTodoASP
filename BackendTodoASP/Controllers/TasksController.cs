@@ -67,7 +67,7 @@ namespace BackendTodoASP.Controllers
                 return NotFound();
             }
 
-            await _taskService.UpdateTaskAsync(taskDto);
+            await _taskService.UpdateTaskAsync(existingTask, taskDto);
             return NoContent();
         }
 

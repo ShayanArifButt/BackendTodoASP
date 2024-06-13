@@ -65,15 +65,11 @@ namespace BackendTodoASP.Services
             };
         }
 
-        public async Task UpdateTaskAsync(TaskDto taskDto)
+        public async Task UpdateTaskAsync(TaskItem task, TaskDto taskDto)
         {
-            var task = new TaskItem
-            {
-                Id = taskDto.Id,
-                Description = taskDto.Description,
-                IsDone = taskDto.IsDone,
-                Deadline = taskDto.Deadline
-            };
+            task.Description = taskDto.Description;
+            task.IsDone = taskDto.IsDone;
+            task.Deadline = taskDto.Deadline;
 
             await _taskRepository.UpdateTaskAsync(task);
         }

@@ -28,21 +28,7 @@ This project is the backend part of the Todo App, built with ASP.NET Core. It pr
     dotnet tool install --global dotnet-ef --version 7.0.20
     ```
 
-4. **Add Initial Migration**:
-
-    If you don't have any migrations yet, create an initial migration:
-
-    ```bash
-    dotnet ef migrations add InitialCreate
-    ```
-
-5. **Update the database**:
-
-    ```bash
-    dotnet ef database update
-    ```
-
-6. **Run the application**:
+4. **Run the application**:
 
     ```bash
     dotnet run

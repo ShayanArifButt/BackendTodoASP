@@ -19,12 +19,14 @@ namespace BackendTodoASP.Data
             modelBuilder.Entity<TaskItem>().HasData(
                 new TaskItem
                 {
+                    Id = 1,
                     Description = "This is a seeded Task 1 on app start",
                     IsDone = false,
                     Deadline = DateTime.Now.AddDays(1)
                 },
                 new TaskItem
                 {
+                    Id = 2,
                     Description = "This is a seeded Task 2 on app start",
                     IsDone = true,
                     Deadline = DateTime.Now.AddDays(2)
